@@ -1,0 +1,9 @@
+user_text = input("Enter message: ")
+
+negative_words = ["hate", "stupid", "idiot", "kill", "dumb", "ugly"]
+flagged = any(word in user_text.lower() for word in negative_words)
+
+if flagged:
+    print("⚠️ Potential cyberbullying detected!")
+else:
+    print("Message seems safe.")
